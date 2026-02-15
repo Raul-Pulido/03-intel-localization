@@ -4,26 +4,38 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Intel: Sustainability Through the Ages</title>
+  <!-- Bootstrap CSS for grid system and RTL support -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <!-- RTL Language Detector Script -->
+  <script src="rtl-detector.js" defer></script>
 </head>
 <body>
 
+  <!-- Skip Navigation Link for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <!-- This link helps keyboard and screen reader users jump directly to the main content -->
+
   <!-- Navigation Bar -->
-  <nav>
+  <nav role="navigation" aria-label="Main navigation">
     <div class="nav-container">
       <a href="#hero" class="nav-logo">Intel</a>
       <ul class="nav-links">
         <li><a href="#hero">Home</a></li>
+        <li><a href="#achievements">Key Achievements</a></li>
         <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#pillars">Sustainability</a></li>
+        <li><a href="#newsletter">Newsletter</a></li>
+        <li><a href="#faq">FAQ</a></li>
       </ul>
     </div>
   </nav>
 
   <!-- Header / Hero Section -->
-  <header id="hero">
+  <header id="hero" role="banner">
     <div>
-      <!-- Ask Copilot to teach you about `.svg`. 🙂 You'll need to resize the logo with CSS. -->
-      <img src="img/intel-header-logo.svg" alt="Intel Logo" />
+      <!-- Intel Logo in Hero Section -->
+      <img src="img/intel-header-logo.svg" alt="Intel Corporation Logo" />
       <!-- Main Heading -->
       <h1>
         Sustainability Through the Ages
@@ -38,8 +50,94 @@
     </div>
   </header>
 
+  <!-- Carousel Section - Key Achievements -->
+  <section id="achievements" class="container my-5" aria-label="Key sustainability achievements carousel">
+    <!-- Bootstrap Carousel Component to showcase major achievements -->
+    
+    <h2 class="text-center mb-4">Key Achievements</h2>
+    
+    <div id="achievementsCarousel" class="carousel slide" data-bs-ride="carousel">
+      <!-- 'carousel slide' creates a Bootstrap carousel -->
+      <!-- 'data-bs-ride="carousel"' makes it auto-play on load -->
+      
+      <!-- Carousel Indicators (dots at bottom) -->
+      <div class="carousel-indicators">
+        <!-- These dots show which slide is active and allow jumping to slides -->
+        <button type="button" data-bs-target="#achievementsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#achievementsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#achievementsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      
+      <!-- Carousel Inner (the actual slides) -->
+      <div class="carousel-inner">
+        <!-- 'carousel-inner' contains all the slides -->
+        
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <!-- 'active' class shows this slide first -->
+          <div class="carousel-slide-content">
+            <div class="row align-items-center">
+              <div class="col-md-6">
+                <img src="img/2006.png" class="d-block w-100" alt="Environmental progress graph" />
+              </div>
+              <div class="col-md-6">
+                <h3>Environmental Leadership</h3>
+                <p>From peak emissions in 2006 to 99% renewable energy in 2023, Intel has reduced its carbon footprint while expanding operations globally.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="carousel-slide-content">
+            <div class="row align-items-center">
+              <div class="col-md-6">
+                <img src="img/1971.png" class="d-block w-100" alt="Intel 4004 microprocessor" />
+              </div>
+              <div class="col-md-6">
+                <h3>Innovation Heritage</h3>
+                <p>Since creating the world's first microprocessor in 1971, Intel has driven technological innovation that enables more efficient, sustainable computing.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <div class="carousel-slide-content">
+            <div class="row align-items-center">
+              <div class="col-md-6">
+                <img src="img/generated-image-1.png" class="d-block w-100" alt="RISE strategy illustration" />
+              </div>
+              <div class="col-md-6">
+                <h3>RISE to the Future</h3>
+                <p>Our RISE strategy (Responsible, Inclusive, Sustainable, Enabling) guides our commitment to achieving net-zero emissions by 2040.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+      <!-- Carousel Controls (Previous/Next buttons) -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#achievementsCarousel" data-bs-slide="prev">
+        <!-- Previous button -->
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#achievementsCarousel" data-bs-slide="next">
+        <!-- Next button -->
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+      
+    </div>
+  </section>
+  <!-- End of carousel section -->
+
   <!-- Timeline Cards Section -->
-  <section id="timeline" class="timeline">
+  <section id="timeline" class="timeline" role="main" id="main-content" aria-label="Intel Sustainability Timeline">
 
     <!-- Card 1: 1968 -->
     <div class="timeline-item">
@@ -47,7 +145,7 @@
       <label for="toggle-1" class="more-info-btn">More Info</label>
       <h2>1968</h2>
       <h3>Intel Founded</h3>
-      <img src="img/1968.png" alt="Intel Founded 1968">
+      <img src="img/1968.png" alt="Historic photo of Intel Corporation founding in 1968, showing early company headquarters">
       <p>
         Robert Noyce and Gordon Moore rename the newly formed company 
         NM Electronics to Intel Corporation, laying the foundation for 
@@ -61,7 +159,7 @@
       <label for="toggle-2" class="more-info-btn">More Info</label>
       <h2>1971</h2>
       <h3>First Microprocessor</h3>
-      <img src="img/1971.png" alt="First Microprocessor 1971">
+      <img src="img/1971.png" alt="Intel 4004 microprocessor, the world's first commercial microprocessor introduced in 1971">
       <p>
         Intel debuts the 4004, the world's first commercial microprocessor, 
         igniting the microprocessor revolution and propelling the future 
@@ -75,7 +173,7 @@
       <label for="toggle-3" class="more-info-btn">More Info</label>
       <h2>1978</h2>
       <h3>8086 Processor</h3>
-      <img src="img/1978.png" alt="8086 Processor 1978">
+      <img src="img/1978.png" alt="Intel 8086 processor chip that established the x86 architecture in 1978">
       <p>
         Launch of the 8086 processor, establishing the x86 architecture 
         that drives countless PCs and servers in the modern era.
@@ -88,7 +186,7 @@
       <label for="toggle-4" class="more-info-btn">More Info</label>
       <h2>1985</h2>
       <h3>386 Processor</h3>
-      <img src="img/1985.png" alt="386 Processor 1985">
+      <img src="img/1985.png" alt="Intel 386 processor with groundbreaking 32-bit architecture introduced in 1985">
       <p>
         Intel introduces the 386 processor with 32-bit architecture, 
         ushering in a new era of performance and multitasking for 
@@ -102,7 +200,7 @@
       <label for="toggle-5" class="more-info-btn">More Info</label>
       <h2>2006</h2>
       <h3>Peak GHG Emissions</h3>
-      <img src="img/2006.png" alt="Peak GHG Emissions 2006">
+      <img src="img/2006.png" alt="Graph showing Intel's peak greenhouse gas emissions in 2006 and subsequent reduction efforts">
       <p>
         This year marks Intel's highest annual greenhouse gas emissions 
         for operations. Over subsequent years, Intel invests heavily in 
@@ -117,7 +215,7 @@
       <label for="toggle-6" class="more-info-btn">More Info</label>
       <h2>2020</h2>
       <h3>RISE Strategy</h3>
-      <img src="img/generated-image-1.png" alt="RISE Strategy 2020">
+      <img src="img/generated-image-1.png" alt="Intel RISE strategy logo representing Responsible, Inclusive, Sustainable, and Enabling initiatives launched in 2020">
       <p>
         Intel launches its RISE (Responsible, Inclusive, Sustainable, 
         Enabling) strategy and 2030 goals, aiming to drive industry-wide 
@@ -131,7 +229,6 @@
       <label for="toggle-7" class="more-info-btn">More Info</label>
       <h2>2022</h2>
       <h3>Net-Zero By 2040</h3>
-      <!-- Add image -->
       <p>
         Intel announces its commitment to achieve net-zero greenhouse 
         gas emissions (Scope 1 and 2) across its global operations 
@@ -145,7 +242,6 @@
       <label for="toggle-8" class="more-info-btn">More Info</label>
       <h2>2023</h2>
       <h3>Renewable Electricity</h3>
-      <!-- Add image -->
       <p>
         The company achieves 99% renewable electricity usage worldwide, 
         helping to drastically lower carbon emissions and driving progress 
@@ -159,7 +255,6 @@
       <label for="toggle-9" class="more-info-btn">More Info</label>
       <h2>2024</h2>
       <h3>Sustainability Summit</h3>
-      <!-- Add image -->
       <p>
         Intel hosts its first Sustainability Summit, uniting suppliers, 
         government officials, and industry leaders to collaborate on 
@@ -168,5 +263,378 @@
     </div>
   </section>
   <p>Scroll to view timeline | Hover over cards to learn more on desktop or click More Info on mobile!</p>
+
+  <!-- New Three-Column Section using Bootstrap Grid -->
+  <section id="pillars" class="container my-5">
+    <!-- The 'id' allows navigation to this section -->
+    <!-- The 'container' class creates a responsive fixed-width container -->
+    <!-- The 'my-5' class adds margin on top and bottom for spacing -->
+    
+    <h2 class="text-center mb-4">Our Sustainability Pillars</h2>
+    <!-- 'text-center' centers the heading text -->
+    <!-- 'mb-4' adds margin-bottom for spacing below the heading -->
+    
+    <div class="row">
+      <!-- The 'row' class creates a horizontal group of columns -->
+      <!-- Bootstrap divides each row into 12 equal parts -->
+      
+      <!-- Column 1 -->
+      <div class="col-md-4 mb-3">
+        <!-- 'col-md-4' means: on medium screens and larger, take up 4 out of 12 parts (33.33% width) -->
+        <!-- On small screens, this will stack vertically and take full width -->
+        <!-- 'mb-3' adds margin-bottom for spacing between stacked columns on mobile -->
+        
+        <div class="card h-100">
+          <!-- 'card' is a Bootstrap component for content containers -->
+          <!-- 'h-100' makes the card take 100% height so all cards in the row are equal height -->
+          
+          <div class="card-body">
+            <!-- 'card-body' adds padding inside the card -->
+            
+            <h3 class="card-title">Environment</h3>
+            <!-- 'card-title' styles the heading inside the card -->
+            
+            <p class="card-text">
+              <!-- 'card-text' styles paragraph text inside the card -->
+              We're committed to reducing our carbon footprint, achieving net-zero emissions, 
+              and using 100% renewable energy across our global operations.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Column 2 -->
+      <div class="col-md-4 mb-3">
+        <!-- Second column, same width as the first (4 out of 12 parts) -->
+        
+        <div class="card h-100">
+          <div class="card-body">
+            <h3 class="card-title">Innovation</h3>
+            <p class="card-text">
+              Through cutting-edge research and development, we create technologies 
+              that enable sustainable solutions for our customers and partners worldwide.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Column 3 -->
+      <div class="col-md-4 mb-3">
+        <!-- Third column completes the row (4 + 4 + 4 = 12 parts total) -->
+        
+        <div class="card h-100">
+          <div class="card-body">
+            <h3 class="card-title">Community</h3>
+            <p class="card-text">
+              We partner with communities, suppliers, and industry leaders to drive 
+              positive change and create a more sustainable future for everyone.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <!-- End of row -->
+    
+  </section>
+  <!-- End of three-column section -->
+
+  <!-- Newsletter Subscription Form -->
+  <section id="newsletter" class="container my-5" aria-labelledby="newsletter-heading">
+    <!-- Container centers the form and adds spacing -->
+    <!-- 'aria-labelledby' links this section to its heading for screen readers -->
+    
+    <div class="row justify-content-center">
+      <!-- 'row' creates a Bootstrap grid row -->
+      <!-- 'justify-content-center' centers the column horizontally -->
+      
+      <div class="col-md-6">
+        <!-- 'col-md-6' makes the form take up 6 out of 12 columns (50% width) on medium screens -->
+        <!-- On small screens, it will take full width -->
+        
+        <div class="card">
+          <!-- 'card' creates a Bootstrap card container -->
+          
+          <div class="card-body">
+            <!-- 'card-body' adds padding inside the card -->
+            
+            <h2 id="newsletter-heading" class="card-title text-center mb-3">Subscribe to Our Newsletter</h2>
+            <!-- 'id' allows ARIA to reference this heading -->
+            <!-- 'text-center' centers the heading -->
+            <!-- 'mb-3' adds margin-bottom for spacing -->
+            
+            <p class="text-center text-muted mb-4">
+              <!-- 'text-muted' makes the text a lighter gray color -->
+              <!-- 'mb-4' adds margin-bottom below the paragraph -->
+              Stay updated on Intel's sustainability initiatives and innovations.
+            </p>
+            
+            <form aria-label="Newsletter subscription form" novalidate>
+              <!-- 'aria-label' provides accessible name for the form -->
+              <!-- 'novalidate' allows custom validation messages -->
+              
+              <div class="mb-3">
+                <!-- 'mb-3' adds margin-bottom for spacing between form fields -->
+                
+                <label for="nameInput" class="form-label">Name <span aria-label="required" class="text-danger">*</span></label>
+                <!-- 'form-label' styles the label for form inputs -->
+                <!-- 'for' attribute connects the label to the input with matching id -->
+                <!-- Red asterisk indicates required field with ARIA label -->
+                
+                <input 
+                  type="text" 
+                  class="form-control" 
+                  id="nameInput"
+                  name="name"
+                  autocomplete="name"
+                  placeholder="Enter your name"
+                  aria-required="true"
+                  required
+                >
+                <!-- 'form-control' is Bootstrap's class for styling input fields -->
+                <!-- 'autocomplete' helps browsers fill in the field -->
+                <!-- 'aria-required' announces field is required to screen readers -->
+              </div>
+              
+              <div class="mb-3">
+                <!-- Another form field container with bottom margin -->
+                
+                <label for="emailInput" class="form-label">Email Address <span aria-label="required" class="text-danger">*</span></label>
+                <!-- Label for the email input with required indicator -->
+                
+                <input 
+                  type="email" 
+                  class="form-control" 
+                  id="emailInput"
+                  name="email"
+                  autocomplete="email"
+                  placeholder="example@email.com"
+                  aria-required="true"
+                  aria-describedby="emailHelp"
+                  required
+                >
+                <!-- 'type="email"' validates that the input is a proper email format -->
+                <!-- 'aria-describedby' links to help text for screen readers -->
+                <small id="emailHelp" class="form-text visually-hidden">
+                  Enter a valid email address to receive our newsletter
+                </small>
+                <!-- Hidden help text for screen readers -->
+              </div>
+              
+              <div class="mb-3">
+                <!-- Container for the interest selection -->
+                
+                <label for="interestSelect" class="form-label">Area of Interest</label>
+                <!-- Label for the dropdown menu -->
+                
+                <select class="form-select" id="interestSelect" name="interest" aria-label="Select your area of interest">
+                  <!-- 'form-select' is Bootstrap's class for dropdown menus -->
+                  <!-- 'aria-label' provides accessible name for the select -->
+                  
+                  <option value="">Choose your interest...</option>
+                  <!-- Empty value for default option -->
+                  
+                  <option value="environment">Environmental Sustainability</option>
+                  <option value="innovation">Technology Innovation</option>
+                  <option value="community">Community Impact</option>
+                  <option value="all">All Topics</option>
+                </select>
+              </div>
+              
+              <div class="form-check mb-3">
+                <!-- 'form-check' is Bootstrap's class for checkbox containers -->
+                
+                <input 
+                  class="form-check-input" 
+                  type="checkbox" 
+                  id="agreeCheck"
+                  name="agreement"
+                  aria-required="true"
+                  required
+                >
+                <!-- 'form-check-input' styles the checkbox -->
+                <!-- 'aria-required' announces this checkbox is required -->
+                
+                <label class="form-check-label" for="agreeCheck">
+                  <!-- 'form-check-label' styles the label next to the checkbox -->
+                  I agree to receive updates from Intel <span aria-label="required" class="text-danger">*</span>
+                </label>
+              </div>
+              
+              <div class="d-grid">
+                <!-- 'd-grid' makes the button take full width -->
+                
+                <button type="submit" class="btn btn-primary btn-lg" aria-label="Submit newsletter subscription">
+                  <!-- 'btn' is the base Bootstrap button class -->
+                  <!-- 'btn-primary' gives the button a blue background -->
+                  <!-- 'btn-lg' makes the button larger -->
+                  <!-- 'aria-label' provides clear action description -->
+                  Subscribe Now
+                </button>
+              </div>
+              
+            </form>
+            
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+  </section>
+  <!-- End of newsletter form section -->
+
+  <!-- Accordion FAQ Section -->
+  <section class="container my-5" id="faq" aria-labelledby="faq-heading">
+    <!-- Bootstrap Accordion Component for Frequently Asked Questions -->
+    
+    <h2 id="faq-heading" class="text-center mb-4">Frequently Asked Questions</h2>
+    
+    <div class="accordion" id="sustainabilityAccordion">
+      <!-- 'accordion' creates a Bootstrap accordion container -->
+      
+      <!-- FAQ Item 1 -->
+      <div class="accordion-item">
+        <!-- Each 'accordion-item' is one collapsible section -->
+        
+        <h3 class="accordion-header" id="headingOne">
+          <!-- Accordion header contains the clickable button -->
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <!-- 'accordion-button' styles the clickable header -->
+            <!-- 'data-bs-toggle="collapse"' enables collapse functionality -->
+            What is Intel's commitment to sustainability?
+          </button>
+        </h3>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#sustainabilityAccordion">
+          <!-- 'collapse show' makes this item open by default -->
+          <!-- 'data-bs-parent' ensures only one item is open at a time -->
+          <div class="accordion-body">
+            <!-- Content goes in 'accordion-body' -->
+            Intel is committed to achieving net-zero greenhouse gas emissions across our global operations by 2040. We focus on renewable energy, water conservation, waste reduction, and creating technologies that enable sustainable solutions for our customers and partners worldwide.
+          </div>
+        </div>
+      </div>
+      
+      <!-- FAQ Item 2 -->
+      <div class="accordion-item">
+        <h3 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <!-- 'collapsed' class means this starts closed -->
+            How does Intel use renewable energy?
+          </button>
+        </h3>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#sustainabilityAccordion">
+          <div class="accordion-body">
+            As of 2023, Intel has achieved 99% renewable electricity usage worldwide through a combination of on-site solar installations, power purchase agreements, and renewable energy certificates. We invest in clean energy projects and work with utilities to increase renewable energy availability in the regions where we operate.
+          </div>
+        </div>
+      </div>
+      
+      <!-- FAQ Item 3 -->
+      <div class="accordion-item">
+        <h3 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            What is the RISE strategy?
+          </button>
+        </h3>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#sustainabilityAccordion">
+          <div class="accordion-body">
+            RISE stands for Responsible, Inclusive, Sustainable, and Enabling. Launched in 2020, this comprehensive strategy guides Intel's corporate responsibility efforts through 2030 and beyond. It encompasses climate action, water stewardship, waste reduction, supply chain responsibility, diversity and inclusion, and technology solutions that benefit society.
+          </div>
+        </div>
+      </div>
+      
+      <!-- FAQ Item 4 -->
+      <div class="accordion-item">
+        <h3 class="accordion-header" id="headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            How can I learn more about Intel's sustainability efforts?
+          </button>
+        </h3>
+        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#sustainabilityAccordion">
+          <div class="accordion-body">
+            You can subscribe to our newsletter above to receive regular updates on Intel's sustainability initiatives and innovations. Visit our corporate responsibility website for detailed reports, participate in our Sustainability Summit, or follow our social media channels for the latest news and achievements.
+          </div>
+        </div>
+      </div>
+      
+      <!-- FAQ Item 5 -->
+      <div class="accordion-item">
+        <h3 class="accordion-header" id="headingFive">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            What was significant about 2006 for Intel's environmental impact?
+          </button>
+        </h3>
+        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#sustainabilityAccordion">
+          <div class="accordion-body">
+            2006 marked Intel's highest annual greenhouse gas emissions for operations. This became a turning point that drove us to invest heavily in chemical abatement technologies, renewable energy adoption, and energy-efficient manufacturing processes. The result has been a significant reduction in emissions even as our business has grown substantially.
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  <!-- End of FAQ accordion section -->
+
+  <!-- Footer Section -->
+  <footer class="bg-dark text-light py-4" role="contentinfo">
+    <!-- 'bg-dark' gives a dark background -->
+    <!-- 'text-light' makes text white/light colored -->
+    <!-- 'py-4' adds padding on top and bottom -->
+    <!-- 'role="contentinfo"' identifies this as the footer landmark -->
+    
+    <div class="container">
+      <!-- Container centers the footer content -->
+      
+      <div class="row">
+        <!-- Create a row for organizing footer content -->
+        
+        <div class="col-md-6 mb-3 mb-md-0">
+          <!-- Left column takes half width on medium screens -->
+          <!-- 'mb-3' adds margin-bottom on small screens -->
+          <!-- 'mb-md-0' removes margin-bottom on medium+ screens -->
+          
+          <p class="mb-0">
+            <!-- 'mb-0' removes default paragraph margin -->
+            &copy; 2026 Intel Corporation. All rights reserved.
+          </p>
+        </div>
+        
+        <div class="col-md-6">
+          <!-- Right column for navigation links -->
+          
+          <ul class="list-inline text-md-end mb-0">
+            <!-- 'list-inline' makes list items display horizontally -->
+            <!-- 'text-md-end' aligns text to the right on medium+ screens -->
+            <!-- 'mb-0' removes default list margin -->
+            
+            <li class="list-inline-item">
+              <!-- 'list-inline-item' styles each link as an inline item -->
+              <a href="#" class="text-light text-decoration-none">Privacy Policy</a>
+              <!-- 'text-light' makes link white -->
+              <!-- 'text-decoration-none' removes underline -->
+            </li>
+            <li class="list-inline-item">|</li>
+            <!-- Separator between links -->
+            <li class="list-inline-item">
+              <a href="#" class="text-light text-decoration-none">Terms of Use</a>
+            </li>
+            <li class="list-inline-item">|</li>
+            <li class="list-inline-item">
+              <a href="#" class="text-light text-decoration-none">Contact</a>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+    
+  </footer>
+  <!-- End of footer section -->
+
+  <!-- Bootstrap JavaScript Bundle (Required for interactive components) -->
+  <!-- This enables Bootstrap components like carousel, accordion, modals, etc. -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

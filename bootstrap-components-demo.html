@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bootstrap Components Demo - Intel Sustainability</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .demo-section {
+      padding: 40px;
+      margin: 20px 0;
+      border: 2px solid #0071c5;
+      border-radius: 8px;
+    }
+    .component-card {
+      margin: 20px 0;
+      padding: 30px;
+      background-color: #f8f9fa;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container my-5">
+    <h1 class="text-center mb-4" style="color: #0071c5;">Bootstrap Interactive Components Demo</h1>
+    
+    <!-- Modal Demo Section -->
+    <div class="component-card">
+      <h2>1. Modal Component</h2>
+      <p>Modals are dialog boxes that overlay the page to show detailed content without navigation.</p>
+      
+      <!-- Button to trigger modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        View Detailed Timeline Information
+      </button>
+      
+      <!-- Modal Structure -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <!-- 'modal-lg' makes the modal larger -->
+          <div class="modal-content">
+            <div class="modal-header" style="background-color: #0071c5; color: white;">
+              <!-- Modal header with title and close button -->
+              <h5 class="modal-title" id="exampleModalLabel">Intel's Net-Zero Commitment</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <!-- Modal content -->
+              <h4>2040 Net-Zero Goal</h4>
+              <p>In 2022, Intel announced its commitment to achieve net-zero greenhouse gas emissions (Scope 1 and 2) across its global operations by 2040.</p>
+              
+              <h5>Key Initiatives:</h5>
+              <ul>
+                <li><strong>Renewable Energy:</strong> Transitioning to 100% renewable electricity</li>
+                <li><strong>Energy Efficiency:</strong> Improving facility and manufacturing efficiency by 10x</li>
+                <li><strong>Green Chemistry:</strong> Investing in sustainable materials and processes</li>
+                <li><strong>Water Conservation:</strong> Achieving net positive water usage</li>
+              </ul>
+              
+              <div class="alert alert-info mt-3">
+                <strong>Progress Update:</strong> As of 2023, Intel has achieved 99% renewable electricity usage worldwide.
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Learn More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Carousel Demo Section -->
+    <div class="component-card">
+      <h2>2. Carousel Component</h2>
+      <p>Carousels display rotating slides of content - perfect for showcasing multiple achievements.</p>
+      
+      <div id="demoCarousel" class="carousel slide mt-3" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#demoCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+          <button type="button" data-bs-target="#demoCarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#demoCarousel" data-bs-slide-to="2"></button>
+        </div>
+        
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="p-5 text-center" style="background-color: #0071c5; color: white; min-height: 300px; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+              <h3>Slide 1: Environmental Leadership</h3>
+              <p>Reducing emissions while growing globally</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="p-5 text-center" style="background-color: #005a9e; color: white; min-height: 300px; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+              <h3>Slide 2: Innovation Heritage</h3>
+              <p>50+ years of technological breakthroughs</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="p-5 text-center" style="background-color: #003d6b; color: white; min-height: 300px; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+              <h3>Slide 3: RISE Strategy</h3>
+              <p>Guiding our path to 2040 and beyond</p>
+            </div>
+          </div>
+        </div>
+        
+        <button class="carousel-control-prev" type="button" data-bs-target="#demoCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demoCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      
+      <div class="alert alert-success mt-3">
+        <strong>Auto-play:</strong> This carousel automatically advances every 5 seconds. Use the arrows or indicators to navigate manually.
+      </div>
+    </div>
+    
+    <!-- Accordion Demo Section -->
+    <div class="component-card">
+      <h2>3. Accordion Component</h2>
+      <p>Accordions organize content into collapsible panels - ideal for FAQs.</p>
+      
+      <div class="accordion mt-3" id="demoAccordion">
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDemo1" aria-expanded="true">
+              What makes accordions useful?
+            </button>
+          </h3>
+          <div id="collapseDemo1" class="accordion-collapse collapse show" data-bs-parent="#demoAccordion">
+            <div class="accordion-body">
+              Accordions save space by keeping content hidden until needed. They're perfect for FAQs, feature lists, and organizing complex information.
+            </div>
+          </div>
+        </div>
+        
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDemo2" aria-expanded="false">
+              How do they improve UX?
+            </button>
+          </h3>
+          <div id="collapseDemo2" class="accordion-collapse collapse" data-bs-parent="#demoAccordion">
+            <div class="accordion-body">
+              Users can quickly scan topics and expand only the information they need, reducing cognitive load and improving navigation.
+            </div>
+          </div>
+        </div>
+        
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDemo3" aria-expanded="false">
+              Are they accessible?
+            </button>
+          </h3>
+          <div id="collapseDemo3" class="accordion-collapse collapse" data-bs-parent="#demoAccordion">
+            <div class="accordion-body">
+              Yes! Bootstrap accordions include proper ARIA attributes, keyboard navigation support, and screen reader compatibility.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Additional Components -->
+    <div class="component-card">
+      <h2>4. Additional Bootstrap Features Used</h2>
+      
+      <h5>Badges</h5>
+      <p>
+        <span class="badge bg-primary">New</span>
+        <span class="badge bg-success">Active</span>
+        <span class="badge bg-info">Featured</span>
+      </p>
+      
+      <h5>Progress Bars</h5>
+      <div class="progress mb-3" style="height: 25px;">
+        <div class="progress-bar bg-success" role="progressbar" style="width: 99%;" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100">99% Renewable Energy</div>
+      </div>
+      
+      <h5>Alerts</h5>
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Success!</strong> You've explored all the Bootstrap components.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      
+      <h5>Tooltips (Hover over button)</h5>
+      <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="This is a helpful tooltip!">
+        Hover Me
+      </button>
+    </div>
+    
+    <!-- Implementation Guide -->
+    <div class="alert alert-primary mt-5">
+      <h3>Implementation Guide</h3>
+      <ol>
+        <li><strong>Include Bootstrap CSS:</strong> Add the Bootstrap stylesheet in your &lt;head&gt;</li>
+        <li><strong>Include Bootstrap JS:</strong> Add the JavaScript bundle before closing &lt;/body&gt;</li>
+        <li><strong>Use Data Attributes:</strong> Bootstrap components work with <code>data-bs-*</code> attributes</li>
+        <li><strong>Customize with CSS:</strong> Override Bootstrap styles with your own CSS classes</li>
+        <li><strong>Test Accessibility:</strong> Ensure keyboard navigation and screen reader support</li>
+      </ol>
+    </div>
+    
+  </div>
+
+  <!-- Bootstrap JavaScript Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Initialize Tooltips -->
+  <script>
+    // Tooltips need to be manually initialized
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+  </script>
+
+</body>
+</html>

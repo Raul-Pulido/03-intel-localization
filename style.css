@@ -2,6 +2,36 @@
 
 /* ===== GLOBAL STYLES ===== */
 
+/* Skip to main content link for accessibility */
+.skip-link {
+  /* Position off-screen by default */
+  position: absolute;
+  /* Move far to the left */
+  left: -9999px;
+  /* Keep at top */
+  top: 0;
+  /* White background for visibility */
+  background-color: #ffffff;
+  /* Intel blue text */
+  color: #0071c5;
+  /* Add padding for clickable area */
+  padding: 10px 20px;
+  /* Remove underline */
+  text-decoration: none;
+  /* Bold text */
+  font-weight: bold;
+  /* Above everything else */
+  z-index: 10000;
+}
+
+/* Show skip link when focused with keyboard */
+.skip-link:focus {
+  /* Bring back on screen */
+  left: 10px;
+  /* Position near top */
+  top: 10px;
+}
+
 /* Enable smooth scroll snap for navigation */
 html {
   /* Enable smooth scrolling */
@@ -74,12 +104,28 @@ nav {
   text-decoration: none;
   /* Smooth transition for hover */
   transition: color 0.3s ease;
+  /* Add padding for larger click area */
+  padding: 8px 12px;
+  /* Rounded corners */
+  border-radius: 4px;
 }
 
 /* Hover effect for navigation links */
 .nav-links a:hover {
   /* Change to Intel blue on hover */
   color: #0071c5;
+  /* Add light background on hover */
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Focus state for navigation links (accessibility) */
+.nav-links a:focus {
+  /* Visible outline for keyboard navigation */
+  outline: 2px solid #ffffff;
+  /* Offset outline for visibility */
+  outline-offset: 2px;
+  /* Intel blue background on focus */
+  background-color: rgba(0, 113, 197, 0.3);
 }
 
 /* ===== HEADER / HERO SECTION STYLES ===== */
@@ -571,3 +617,712 @@ header {
     opacity: 0;
   }
 }
+
+/* ===== SUSTAINABILITY PILLARS SECTION STYLES ===== */
+
+/* Add scroll snap to the sustainability pillars section */
+#pillars {
+  /* Snap to this section when scrolling */
+  scroll-snap-align: start;
+  /* Account for sticky navigation bar height */
+  scroll-margin-top: 60px;
+}
+
+/* Style the cards in the sustainability pillars section */
+#pillars .card {
+  /* Intel blue background for cards */
+  background-color: #0071c5;
+  /* Remove default border */
+  border: none;
+}
+
+/* Style the headings in sustainability cards */
+#pillars .card-title {
+  /* White color for better contrast on Intel blue background */
+  /* Changed from light blue (#7fc7ff) to meet WCAG AA contrast requirements */
+  color: #ffffff;
+  /* Make headings bold for emphasis */
+  font-weight: bold;
+}
+
+/* Style the text in sustainability cards */
+#pillars .card-text {
+  /* White color for paragraph text */
+  color: #ffffff;
+}
+
+/* Style the main section heading */
+#pillars h2 {
+  /* Keep the main heading dark for contrast against white background */
+  color: #0071c5;
+}
+
+/* ===== NEWSLETTER FORM SECTION STYLES ===== */
+
+/* Add scroll snap to the newsletter section */
+#newsletter {
+  /* Snap to this section when scrolling */
+  scroll-snap-align: start;
+  /* Account for sticky navigation bar height */
+  scroll-margin-top: 60px;
+}
+
+/* Style the newsletter card */
+#newsletter .card {
+  /* Intel blue background */
+  background-color: #0071c5;
+  /* Remove default border */
+  border: none;
+}
+
+/* Style the newsletter heading */
+#newsletter .card-title {
+  /* White color for better contrast on Intel blue background */
+  /* Changed from light blue (#7fc7ff) to meet WCAG AA contrast requirements */
+  color: #ffffff;
+  /* Make heading bold for emphasis */
+  font-weight: bold;
+}
+
+/* Style the subtitle text */
+#newsletter .text-muted {
+  /* White color instead of light blue for better contrast */
+  /* Meets WCAG AA contrast requirements (7:1 ratio on Intel blue) */
+  color: #ffffff !important;
+  /* Slightly lighter weight to differentiate from heading */
+  font-weight: normal;
+}
+
+/* Style form labels */
+#newsletter .form-label {
+  /* White color for form labels */
+  color: #ffffff;
+}
+
+/* Style form inputs */
+#newsletter .form-control,
+#newsletter .form-select {
+  /* Keep inputs white for better usability */
+  background-color: #ffffff;
+  /* Dark text in inputs for readability */
+  color: #333333;
+  /* Medium border for visibility */
+  border-color: #adb5bd;
+  /* Thicker border for better visibility */
+  border-width: 2px;
+}
+
+/* Focus state for form inputs */
+#newsletter .form-control:focus,
+#newsletter .form-select:focus {
+  /* Keep white background on focus */
+  background-color: #ffffff;
+  /* Intel blue border on focus */
+  border-color: #0071c5;
+  /* Add visible outline for accessibility */
+  outline: 2px solid #0071c5;
+  /* Offset outline slightly */
+  outline-offset: 2px;
+}
+
+/* Style checkbox label */
+#newsletter .form-check-label {
+  /* White color for checkbox label */
+  color: #ffffff;
+}
+
+/* Customize Bootstrap primary button to use Intel blue */
+#newsletter .btn-primary {
+  /* Intel blue background */
+  background-color: #0071c5;
+  /* Intel blue border */
+  border-color: #0071c5;
+  /* Make button stand out with white background */
+  background-color: #ffffff;
+  /* Dark blue text */
+  color: #0071c5;
+  /* Bold text */
+  font-weight: bold;
+}
+
+/* Darken button on hover */
+#newsletter .btn-primary:hover {
+  /* Darker Intel blue on hover */
+  background-color: #7fc7ff;
+  /* Darker border on hover */
+  border-color: #7fc7ff;
+  /* Keep text dark blue */
+  color: #0071c5;
+}
+
+/* ===== FOOTER SECTION STYLES ===== */
+
+/* Style the footer */
+footer {
+  /* Dark background matching navigation */
+  background-color: #333333 !important;
+  /* Ensure footer stays at bottom */
+  margin-top: auto;
+}
+
+/* Style footer links on hover */
+footer a:hover {
+  /* Change to Intel blue on hover */
+  color: #0071c5 !important;
+  /* Smooth transition */
+  transition: color 0.3s ease;
+}
+
+/* Focus state for footer links (accessibility) */
+footer a:focus {
+  /* Visible outline for keyboard navigation */
+  outline: 2px solid #ffffff;
+  /* Offset outline */
+  outline-offset: 2px;
+  /* Intel blue color on focus */
+  color: #0071c5 !important;
+}
+
+/* Required field asterisks */
+.text-danger {
+  /* Red color for required indicators */
+  color: #dc3545;
+  /* Bold for emphasis */
+  font-weight: bold;
+}
+
+/* ===== CAROUSEL SECTION STYLES ===== */
+
+/* Add scroll snap to the key achievements carousel section */
+#achievements {
+  /* Snap to this section when scrolling */
+  scroll-snap-align: start;
+  /* Account for sticky navigation bar height */
+  scroll-margin-top: 60px;
+}
+
+/* Carousel slide content container */
+.carousel-slide-content {
+  /* Add padding around carousel content */
+  padding: 40px 20px;
+  /* White background */
+  background-color: #ffffff;
+  /* Rounded corners */
+  border-radius: 8px;
+  /* Minimum height for consistency */
+  min-height: 400px;
+  /* Center content vertically */
+  display: flex;
+  align-items: center;
+}
+
+/* Carousel images */
+.carousel-slide-content img {
+  /* Rounded corners for images */
+  border-radius: 8px;
+  /* Add shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Maximum height to prevent oversized images */
+  max-height: 300px;
+  /* Maintain aspect ratio */
+  object-fit: cover;
+}
+
+/* Carousel headings */
+.carousel-slide-content h3 {
+  /* Intel blue color */
+  color: #0071c5;
+  /* Larger font size */
+  font-size: 28px;
+  /* Bold text */
+  font-weight: bold;
+  /* Spacing below */
+  margin-bottom: 15px;
+}
+
+/* Carousel text */
+.carousel-slide-content p {
+  /* Dark gray for readability */
+  color: #333333;
+  /* Comfortable line height */
+  line-height: 1.6;
+  /* Medium font size */
+  font-size: 16px;
+}
+
+/* Carousel control buttons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  /* Make controls more visible with background */
+  background-color: rgba(0, 113, 197, 0.8);
+  /* Rounded shape */
+  border-radius: 50%;
+  /* Larger size */
+  width: 3rem;
+  height: 3rem;
+}
+
+/* Carousel indicators */
+.carousel-indicators button {
+  /* Intel blue color */
+  background-color: #0071c5;
+  /* Larger size for better visibility */
+  width: 12px;
+  height: 12px;
+  /* Rounded shape */
+  border-radius: 50%;
+}
+
+/* ===== ACCORDION FAQ SECTION STYLES ===== */
+
+/* FAQ section scroll snap */
+#faq {
+  /* Snap to this section when scrolling */
+  scroll-snap-align: start;
+  /* Account for sticky navigation bar height */
+  scroll-margin-top: 60px;
+}
+
+/* Accordion items */
+.accordion-item {
+  /* Add spacing between items */
+  margin-bottom: 10px;
+  /* Rounded corners */
+  border-radius: 8px !important;
+  /* Remove default border */
+  border: none !important;
+  /* Add custom border */
+  border: 2px solid #e0e0e0 !important;
+}
+
+/* Accordion buttons */
+.accordion-button {
+  /* Intel blue text color */
+  color: #0071c5;
+  /* Larger font size */
+  font-size: 18px;
+  /* Bold text */
+  font-weight: bold;
+  /* White background */
+  background-color: #ffffff;
+  /* Add padding */
+  padding: 20px;
+}
+
+/* Accordion button when not collapsed (expanded) */
+.accordion-button:not(.collapsed) {
+  /* Intel blue background when expanded */
+  background-color: #0071c5;
+  /* White text when expanded */
+  color: #ffffff;
+  /* Remove default box shadow */
+  box-shadow: none;
+}
+
+/* Accordion button focus state */
+.accordion-button:focus {
+  /* Remove default focus outline */
+  box-shadow: none;
+  /* Add custom focus ring */
+  outline: 2px solid #0071c5;
+  /* Offset outline */
+  outline-offset: 2px;
+}
+
+/* Accordion body */
+.accordion-body {
+  /* Larger font size for readability */
+  font-size: 16px;
+  /* Comfortable line height */
+  line-height: 1.6;
+  /* Dark gray text */
+  color: #333333;
+  /* Add padding */
+  padding: 20px;
+  /* Light background */
+  background-color: #f8f9fa;
+}
+
+/* ===== RTL (RIGHT-TO-LEFT) LANGUAGE SUPPORT ===== */
+
+/* RTL-specific adjustments when RTL is active */
+[dir="rtl"] .timeline::before {
+  /* Move timeline line to the right side for RTL languages */
+  left: auto;
+  right: 20px;
+}
+
+[dir="rtl"] .timeline-item {
+  /* Add space to the right for RTL timeline */
+  margin-left: 0;
+  margin-right: 50px;
+}
+
+[dir="rtl"] .timeline-item::before {
+  /* Move timeline dot to the right side */
+  left: auto;
+  right: -42px;
+}
+
+[dir="rtl"] .more-info-btn {
+  /* Position button on left side for RTL */
+  right: auto;
+  left: 10px;
+}
+
+[dir="rtl"] .toggle-checkbox:checked ~ .more-info-btn {
+  /* Keep X centered for RTL */
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+}
+
+[dir="rtl"] .nav-container {
+  /* Reverse flex direction for RTL navigation */
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .nav-links {
+  /* Reverse the order of navigation links */
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] footer .text-md-end {
+  /* Align footer links to the left in RTL mode */
+  text-align: left !important;
+}
+
+/* RTL adjustments for larger screens */
+@media (min-width: 681px) {
+  [dir="rtl"] .timeline-item {
+    /* Reset margins for horizontal RTL timeline */
+    margin-right: 0;
+    margin-left: 30px;
+  }
+  
+  [dir="rtl"] .timeline-item:last-child {
+    /* Remove left margin from last card in RTL */
+    margin-left: 0;
+  }
+  
+  [dir="rtl"] .timeline-item::before {
+    /* Keep dot centered in horizontal RTL layout */
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+}
+
+/* ===== MOBILE OPTIMIZATION FOR SMALL SCREENS ===== */
+/* Apply flexbox fixes for screens 680px and smaller to ensure everything fits */
+@media (max-width: 680px) {
+  
+  /* Fix navigation bar to always fit screen */
+  .nav-container {
+    /* Use flexbox with wrapping */
+    display: flex;
+    /* Allow items to wrap to next line if needed */
+    flex-wrap: wrap;
+    /* Center items */
+    justify-content: center;
+    /* Add gap between items */
+    gap: 10px;
+    /* Reduce padding on small screens */
+    padding: 0 10px;
+  }
+  
+  /* Navigation logo */
+  .nav-logo {
+    /* Take full width on very small screens if needed */
+    flex: 0 0 auto;
+    /* Reduce font size slightly */
+    font-size: 20px;
+    /* Add some margin */
+    margin-bottom: 5px;
+  }
+  
+  /* Navigation links container */
+  .nav-links {
+    /* Use flexbox */
+    display: flex;
+    /* Allow wrapping */
+    flex-wrap: wrap;
+    /* Center items */
+    justify-content: center;
+    /* Reduce gap */
+    gap: 10px;
+    /* Full width */
+    width: 100%;
+  }
+  
+  /* Navigation link items */
+  .nav-links li {
+    /* Flex item */
+    flex: 0 0 auto;
+  }
+  
+  /* Navigation links */
+  .nav-links a {
+    /* Smaller padding */
+    padding: 6px 10px;
+    /* Smaller font */
+    font-size: 14px;
+    /* Prevent text wrapping */
+    white-space: nowrap;
+  }
+  
+  /* Fix carousel content to fit screen */
+  .carousel-slide-content {
+    /* Use flexbox for better control */
+    display: flex;
+    /* Column layout */
+    flex-direction: column;
+    /* Reduce padding */
+    padding: 20px 10px;
+    /* Reduce minimum height */
+    min-height: auto;
+    /* Let height adjust to content */
+    height: auto;
+  }
+  
+  /* Carousel images on mobile */
+  .carousel-slide-content img {
+    /* Full width of container */
+    width: 100%;
+    /* Auto height to maintain ratio */
+    height: auto;
+    /* Reduce max height on mobile */
+    max-height: 200px;
+    /* Fit within container */
+    object-fit: contain;
+    /* Add spacing */
+    margin-bottom: 15px;
+  }
+  
+  /* Carousel text container */
+  .carousel-slide-content .row {
+    /* Use flexbox */
+    display: flex;
+    /* Stack vertically */
+    flex-direction: column;
+    /* Full width */
+    width: 100%;
+    /* Remove negative margins from Bootstrap */
+    margin: 0;
+  }
+  
+  /* Carousel columns on mobile */
+  .carousel-slide-content .col-md-6 {
+    /* Full width */
+    width: 100%;
+    /* Remove padding from Bootstrap */
+    padding: 0;
+    /* Add small bottom margin */
+    margin-bottom: 10px;
+  }
+  
+  /* Carousel headings on mobile */
+  .carousel-slide-content h3 {
+    /* Smaller font size */
+    font-size: 20px;
+    /* Reduce margin */
+    margin-bottom: 10px;
+  }
+  
+  /* Carousel text on mobile */
+  .carousel-slide-content p {
+    /* Smaller font size */
+    font-size: 14px;
+    /* Adjust line height */
+    line-height: 1.5;
+  }
+  
+  /* Fix header/hero section */
+  header {
+    /* Use flexbox */
+    display: flex;
+    /* Column direction */
+    flex-direction: column;
+    /* Center content */
+    align-items: center;
+    /* Reduce padding */
+    padding: 20px 15px;
+  }
+  
+  /* Hero heading */
+  header h1 {
+    /* Smaller font size */
+    font-size: 24px;
+    /* Center text */
+    text-align: center;
+  }
+  
+  /* Hero paragraph */
+  header p {
+    /* Smaller font size */
+    font-size: 14px;
+    /* Center text */
+    text-align: center;
+    /* Add max width to prevent too wide text */
+    max-width: 100%;
+  }
+  
+  /* Hero logo */
+  header img {
+    /* Limit logo size on small screens */
+    max-width: 200px;
+    /* Auto height */
+    height: auto;
+  }
+  
+  /* Fix sustainability pillars section */
+  #pillars .row {
+    /* Use flexbox */
+    display: flex;
+    /* Stack columns vertically */
+    flex-direction: column;
+    /* Remove negative margins */
+    margin: 0;
+  }
+  
+  #pillars .col-md-4 {
+    /* Full width */
+    width: 100%;
+    /* Remove Bootstrap padding */
+    padding: 0 15px;
+    /* Add spacing between cards */
+    margin-bottom: 20px;
+  }
+  
+  /* Fix newsletter section */
+  #newsletter .container {
+    /* Use flexbox */
+    display: flex;
+    /* Column direction */
+    flex-direction: column;
+    /* Reduce padding */
+    padding: 0 15px;
+  }
+  
+  #newsletter .row {
+    /* Use flexbox */
+    display: flex;
+    /* Column direction */
+    flex-direction: column;
+    /* Remove negative margins */
+    margin: 0;
+  }
+  
+  #newsletter .col-md-8 {
+    /* Full width */
+    width: 100%;
+    /* Remove padding */
+    padding: 0;
+  }
+  
+  /* Fix FAQ accordion on mobile */
+  #faq .container {
+    /* Reduce padding */
+    padding: 0 15px;
+  }
+  
+  .accordion-button {
+    /* Smaller font size */
+    font-size: 16px;
+    /* Reduce padding */
+    padding: 15px;
+    /* Allow text to wrap */
+    white-space: normal;
+    /* Align text left */
+    text-align: left;
+  }
+  
+  .accordion-body {
+    /* Smaller font size */
+    font-size: 14px;
+    /* Reduce padding */
+    padding: 15px;
+  }
+  
+  /* Fix footer on mobile */
+  footer .container {
+    /* Use flexbox */
+    display: flex;
+    /* Column direction */
+    flex-direction: column;
+    /* Center items */
+    align-items: center;
+    /* Reduce padding */
+    padding: 15px;
+  }
+  
+  footer .row {
+    /* Use flexbox */
+    display: flex;
+    /* Column direction */
+    flex-direction: column;
+    /* Center items */
+    align-items: center;
+    /* Full width */
+    width: 100%;
+    /* Remove negative margins */
+    margin: 0;
+  }
+  
+  footer .col-md-6 {
+    /* Full width */
+    width: 100%;
+    /* Center text */
+    text-align: center !important;
+    /* Add spacing */
+    margin-bottom: 10px;
+    /* Remove padding */
+    padding: 0;
+  }
+  
+  /* Fix carousel controls on mobile */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    /* Smaller size on mobile */
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  /* Fix carousel indicators */
+  .carousel-indicators button {
+    /* Smaller size */
+    width: 8px;
+    height: 8px;
+  }
+  
+  /* Ensure all sections use full width and don't overflow */
+  section {
+    /* Full width */
+    width: 100%;
+    /* Prevent horizontal overflow */
+    overflow-x: hidden;
+    /* Use border-box sizing */
+    box-sizing: border-box;
+  }
+  
+  /* Ensure container elements fit screen */
+  .container {
+    /* Full width */
+    max-width: 100%;
+    /* Remove side padding overflow */
+    padding-left: 10px;
+    padding-right: 10px;
+    /* Use border-box */
+    box-sizing: border-box;
+  }
+  
+  /* Prevent body overflow */
+  body {
+    /* Prevent horizontal scroll */
+    overflow-x: hidden;
+    /* Full width */
+    width: 100%;
+  }
+  
+}
+
